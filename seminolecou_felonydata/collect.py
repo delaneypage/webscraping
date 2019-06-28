@@ -98,14 +98,8 @@ def search_dates(date_ranges, year=0):
 
             the_1st, the_15th, next_1st = date_range[0], date_range[1], date_range[2]
 
-            if the_1st == '01/01/2011':
-                pass
-            elif the_1st == '02/01/2011':
-                search_from(the_15th, next_1st)
-
-            else:
-                search_from(the_1st, the_15th)
-                search_from(the_15th, next_1st)
+            search_from(the_1st, the_15th)
+            search_from(the_15th, next_1st)
 
         return True
 

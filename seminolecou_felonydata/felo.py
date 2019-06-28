@@ -3,10 +3,14 @@ import helper
 import collect
 import convert
 
-mos = np.arange(1, 13)
-yrs = np.arange(11, 19)
+start_yr = input("Enter a year: ")
+start_mo = input("Enter a starting month: ")
+end_mo = input("Enter an ending month: ")
 
 dates = {}
+
+yrs = [int(start_yr)]
+mos = np.arange(int(start_mo), int(end_mo))
 
 for y in yrs:
     dates['20' + str(y)] = []
@@ -15,7 +19,5 @@ for y in yrs:
 
 str_yrs = [date for date in dates]
 
-a_year = input("Enter a year:")
-
-collect.search_dates(dates, a_year)
+collect.search_dates(dates)
 
